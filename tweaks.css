@@ -1,0 +1,88 @@
+/* Copy :root block to enable tweaks
+:root {
+    --twk-hide-avatar-deco              : true;
+    --twk-hide-gift-button              : true;
+    --twk-hide-guild-tag                : true;
+    --twk-hide-nameplates               : true;
+    --twk-hide-profile-effects          : true;
+    --twk-hide-profile-gradients        : true;
+    --twk-hide-role-gradients           : true;
+    --twk-hide-role-icons               : true;
+    
+    --twk-fade-voice-activity           : true;
+    --twk-fullscreen-video-close-button : true;
+}
+*/
+
+/* Remove annoyances **************************************************************************************************/
+
+@container style(--twk-hide-avatar-deco: true) {
+    *[class*="avatarDecoration_"] {
+        display: none !important;
+    }
+}
+
+@container style(--twk-hide-gift-button: true) {
+    button[aria-label="Send a gift"] {
+        display: none !important;
+    }
+}
+
+@container style(--twk-hide-guild-tag: true) {
+    div[class*="chipletParent_"], span[class*="chipletContainerInner_"] {
+        display: none !important;
+    }
+}
+
+@container style(--twk-hide-nameplates: true) {
+    div[class*="member_"] > div[class*="childContainer_"] > div[class*="container_"] {
+        display: none !important;
+    }
+}
+
+@container style(--twk-hide-profile-effects: true) {
+    div[class*="profileEffects_"] {
+        display: none !important;
+    }
+}
+
+@container style(--twk-hide-profile-gradients: true) {
+    div[id*="popout_"] div[class*="user-profile-popout"] {
+        background: #333333 !important;
+    }
+}
+
+@container style(--twk-hide-role-gradients: true) {
+    *[class*="twoColorGradient_"] {
+        color: var(--custom-gradient-color-1);
+        background: unset;
+        -webkit-text-fill-color: unset;
+    }
+}
+
+@container style(--twk-hide-role-icons: true) {
+    img[class*="roleIcon_"] {
+        display: none !important;
+    }
+}
+
+/* Other **************************************************************************************************************/
+
+@container style(--twk-fade-voice-activity: true) {
+    div[class*="userAvatar_"] {
+        transition: box-shadow 1s ease-out;
+    }
+    div[class*="avatarSpeaking_"] {
+        transition: box-shadow 0s !important;
+    }
+}
+
+@container style(--twk-fullscreen-video-close-button: true) {
+    *[class*="videoButton_"] {
+        margin-right: 0px;
+
+        *[class*="controlIcon_"] {
+            padding-right: 12px; /* starts with 4px */
+        }
+    }
+}
