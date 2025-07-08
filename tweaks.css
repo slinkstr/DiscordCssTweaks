@@ -53,7 +53,7 @@
 }
 
 @container style(--twk-hide-role-gradients: true) {
-    *[class*="twoColorGradient_"] {
+    *[class*="usernameGradient_"] {
         color: var(--custom-gradient-color-1);
         background: unset;
         -webkit-text-fill-color: unset;
