@@ -23,7 +23,7 @@
 }
 
 @container style(--twk-hide-gift-button: true) {
-    div[aria-label="Send a gift"] {
+    div[class*="container_"]:has(> div[aria-label="Send a gift"]) {
         display: none !important;
     }
 }
