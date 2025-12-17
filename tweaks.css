@@ -17,47 +17,43 @@
 /* Remove annoyances **************************************************************************************************/
 
 @container style(--twk-hide-avatar-deco: true) {
-    *[class*="avatarDecoration_"] {
+    *[class*="avatarDecoration"] {
         display: none !important;
     }
 }
 
 @container style(--twk-hide-gift-button: true) {
-    div[class*="container_"]:has(> div[aria-label="Send a gift"]) {
-        display: none !important;
-    }
-    
-    div[aria-label="Send a gift"] {
+    div[class*="container"]:has(> div[aria-label="Send a gift"]) {
         display: none !important;
     }
 }
 
 @container style(--twk-hide-guild-tag: true) {
-    div[class*="chipletParent_"], span[class*="chipletContainerInner_"] {
+    div[class*="chipletParent"], span[class*="chipletContainerInner"] {
         display: none !important;
     }
 }
 
 @container style(--twk-hide-nameplates: true) {
-    div[class*="member_"] > div[class*="childContainer_"] > div[class*="container_"] {
+    div[class*="member"] > div[class*="childContainer"] > div[class*="container"] {
         display: none !important;
     }
 }
 
 @container style(--twk-hide-profile-effects: true) {
-    div[class*="profileEffects_"] {
+    div[class*="profileEffects"] {
         display: none !important;
     }
 }
 
 @container style(--twk-hide-profile-gradients: true) {
-    div[id*="popout_"] div[class*="user-profile-popout"] {
+    div[id*="popout"] div[class*="user-profile-popout"] {
         background: #333333 !important;
     }
 }
 
 @container style(--twk-hide-role-gradients: true) {
-    *[class*="usernameGradient_"] {
+    *[class*="usernameGradient"] {
         color: var(--custom-gradient-color-1);
         background: unset;
         -webkit-text-fill-color: unset;
@@ -65,7 +61,7 @@
 }
 
 @container style(--twk-hide-role-icons: true) {
-    img[class*="roleIcon_"] {
+    img[class*="roleIcon"] {
         display: none !important;
     }
 }
@@ -73,19 +69,19 @@
 /* Other **************************************************************************************************************/
 
 @container style(--twk-fade-voice-activity: true) {
-    div[class*="userAvatar_"] {
-        transition: box-shadow 1s ease-out;
+    div[class*="userAvatar"] {
+        transition: box-shadow 2s ease-out !important;
     }
-    div[class*="avatarSpeaking_"] {
+    div[class*="userAvatar"][style*="--status-speaking"] {
         transition: box-shadow 0s !important;
     }
 }
 
 @container style(--twk-fullscreen-video-close-button: true) {
-    *[class*="videoButton_"] {
+    *[class*="videoButton"] {
         margin-right: 0px;
 
-        *[class*="controlIcon_"] {
+        *[class*="controlIcon"] {
             padding-right: 12px; /* starts with 4px */
         }
     }
