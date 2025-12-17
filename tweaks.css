@@ -68,7 +68,7 @@
 }
 
 @container style(--twk-hide-shop-new-badge: true) {
-    *[data-list-item-id="private-channels-uid_3132___shop"] > *[class*="newBadge"] {
+    *[data-list-item-id*="shop"] > *[class*="newBadge"] {
         display: none !important;
     }
 }
