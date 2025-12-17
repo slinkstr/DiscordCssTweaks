@@ -8,6 +8,7 @@
     --twk-hide-profile-gradients        : true;
     --twk-hide-role-gradients           : true;
     --twk-hide-role-icons               : true;
+    --twk-hide-shop-new-badge           : true;
     
     --twk-fade-voice-activity           : true;
     --twk-fullscreen-video-close-button : true;
@@ -62,6 +63,12 @@
 
 @container style(--twk-hide-role-icons: true) {
     img[class*="roleIcon"] {
+        display: none !important;
+    }
+}
+
+@container style(--twk-hide-shop-new-badge: true) {
+    *[data-list-item-id="private-channels-uid_3132___shop"] > *[class*="newBadge"] {
         display: none !important;
     }
 }
